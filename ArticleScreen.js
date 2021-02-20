@@ -4,7 +4,7 @@ import { Text, ScrollView, StyleSheet, View } from 'react-native';
 const ArticleScreen = ({navigation,route}) => {
     
     return(
-        <ScrollView style={styles.container}>
+        <ScrollView style={styles.container} contentContainerStyle={styles.scrollContainer}>
             <Text style={styles.bigText}>{route.params.name}</Text>
             <Text style={styles.bigText}>Address: {route.params.address}</Text>
             <Text style={styles.bigText}>Date Built: {route.params.date}</Text>
@@ -17,7 +17,9 @@ const ArticleScreen = ({navigation,route}) => {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      marginTop: 40,
+      marginTop: 40
+    },
+    scrollContainer: {
       alignItems:'center',
       alignContent:'center'
     },
