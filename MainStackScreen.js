@@ -7,7 +7,7 @@ import MapScreen from './MapScreen';
 import ArchiveStack from './ArchiveStack';
 import { TextInput } from 'react-native-gesture-handler';
 import dataBase from "./DateBase.json";
-import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import PasswordScreen from './PasswordScreen';
 
 const Tab = createBottomTabNavigator();
