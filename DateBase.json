@@ -1,5 +1,5 @@
 {
- "authentication": {"password": "password"},
+ "authentication": {"password": "password", "qrCode": "%X);ssr;xM=G"},
  "homes":[
         {"key": "2535b", "coord":{"latitude": 40.7998362079638, "longitude":-96.68389799627629}, "name": "Pauley-Sinkey House", "address": "2535 B Street", "date": "1920", "arch": "Robert E. Richardson", 
                 "descript": "Frank and Olive Sinkey occupied 2535 B Street as early as 1921, then bought it from Ludwig Pauley in 1923 for $7,500. Frank was employed by Chicago, Burlington, & Quincy Railroad as chief dispatcher—a highly responsible position. Although built of wood, not the masonry preferred for more costly Prairie School houses, the Sinkeys’ house shared many characteristics of that style including the low-pitched hipped roof, wide eaves, varied windows, and especially the unusual porch. The porch is framed by buttress-like walls with stepped parapets supporting the shed roof, and partially screened with sturdy latticework panels."},

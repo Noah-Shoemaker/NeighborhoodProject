@@ -15,6 +15,7 @@ const STORAGE_KEY = '@authState';
 
 function MainStackScreen() {
 
+    /* CODE TO SUPPORT PASSWORD SCREEN
     const [auth, setauth] = useState(false);
     const [value, onChangeText] = useState('');
     const ref = useRef(auth);
@@ -71,7 +72,8 @@ function MainStackScreen() {
             <PasswordScreen checkPassword={checkPassword} onChangeText={onChangeText} value={value}/>
       )
     }
-    
+    */
+
     return (
         <Tab.Navigator tabBarOptions={{
                           labelStyle: styles.tabText,
