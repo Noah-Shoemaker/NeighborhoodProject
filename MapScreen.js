@@ -6,8 +6,6 @@ import dataBase from "./DateBase.json";
 const MapScreen = ({navigation}) => {
 
     const markers = dataBase.homes;
-    //creates list of markers from dataBase entries
-    const coords = markers.map(home => home.coord);
 
     return(
 
@@ -19,7 +17,7 @@ const MapScreen = ({navigation}) => {
                     latitudeDelta: 0.014109,
                     longitudeDelta: 0.02047
                 }}
-                showsUserLocation="true"
+                showsUserLocation={true}
             >
                 
                 {markers.map((marker) => (<Marker onCalloutPress={() => navigation.navigate("Article",marker)} 
