@@ -58,7 +58,7 @@ const QRCodeAuth = ({navigation}) => {
                 <   Text style={styles.text}>Press to Start</Text>
                 </TouchableOpacity>
 
-                <Button title={'Skip Scan'} onPress={() => setRead(true)} />
+                <Button title={'Skip Scan'} onPress={() => navigation.navigate("Main")} />
             </View>
         )
     }
