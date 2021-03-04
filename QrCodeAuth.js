@@ -7,26 +7,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const QRCodeAuth = ({navigation}) => {
 
-    const STORAGE_KEY = '@authState';
-
-    const getMyObject = async () => {
-        try {
-          const jsonValue = await AsyncStorage.getItem(STORAGE_KEY)
-          return jsonValue != null ? JSON.parse(jsonValue) : null
-        } catch(e) {
-          alert("Could not verify authentication. Please try again")
-        }
-      }
-      
-    const setObjectValue = async (value) => {
-        try {
-          const jsonValue = JSON.stringify(value)
-          await AsyncStorage.setItem(STORAGE_KEY, jsonValue)
-        } catch(e) {
-          alert("Could not save authentication data. Please try again.")
-        }
-    }
-
     const [hasPermission, setHasPermission] = useState(null);
     const [scanned, setScanned] = useState(false);
     const [read, setRead] = useState(false);
@@ -57,7 +37,6 @@ const QRCodeAuth = ({navigation}) => {
 
         if (data === dataBase.authentication.qrCode) {
             navigation.navigate("Main");
-            setObjectValue({"auth": true});
         }
         else {
             alert("Wrong QR code for authentication, please try again.");
@@ -73,16 +52,13 @@ const QRCodeAuth = ({navigation}) => {
 
     if (read === false) {
     
-        var authValue = getMyObject().auth;
-
-        if (!authValue) {
-            navigation.navigate("Main");
-        }
         return(
             <View style={styles.container}>
                 <TouchableOpacity style={styles.button} onPress={createButtonAlert}>
                 <   Text style={styles.text}>Press to Start</Text>
                 </TouchableOpacity>
+
+                <Button title={'Skip Scan'} onPress={() => setRead(true)} />
             </View>
         )
     }

@@ -12,9 +12,6 @@ import QrCodeAuth from './QrCodeAuth';
 
 const Tab = createBottomTabNavigator();
 
-
-
-
 function MainStackScreen() {
 
         return (
