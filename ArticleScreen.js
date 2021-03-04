@@ -41,7 +41,6 @@ const ArticleScreen = ({navigation,route}) => {
             
             <Marker
                 coordinate={marker[0].coord} title={marker[0].name}
-                description={"Click for more info"}
                 pinColor='green'/>
             
         </MapView>

@@ -8,84 +8,27 @@ import ArchiveStack from './ArchiveStack';
 import { TextInput } from 'react-native-gesture-handler';
 import dataBase from "./DateBase.json";
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import PasswordScreen from './PasswordScreen';
+import QrCodeAuth from './QrCodeAuth';
 
 const Tab = createBottomTabNavigator();
-const STORAGE_KEY = '@authState';
+
+
+
 
 function MainStackScreen() {
 
-    /* CODE TO SUPPORT PASSWORD SCREEN
-    const [auth, setauth] = useState(false);
-    const [value, onChangeText] = useState('');
-    const ref = useRef(auth);
-
-    const readData = async () => {
-        try {
-
-          const authState = await AsyncStorage.getItem(STORAGE_KEY)
-      
-          if (authState !== null) {
-              if (authState === "true") {
-                  setauth(true)
-              }
-              else {
-                  setauth(false)
-              }
-          }
-
-        } catch (e) {
-          alert('Failed to fetch the data from storage')
-        }
-    }
-
-    const saveData = async (auth) => {
-        try {
-            if (auth) {
-                await AsyncStorage.setItem(STORAGE_KEY, "true")
-            }
-            else {
-                await AsyncStorage.setItem(STORAGE_KEY, "false")
-            }
-        } catch (e) {
-          alert('Failed to save the data to the storage')
-        }
-    }
-      
-    useEffect( () => {readData()}, []);
-    
-    function checkPassword(e) {
-
-        setauth(e === dataBase.authentication.password);
-        ref.current = (e === dataBase.authentication.password);
-        saveData(e === dataBase.authentication.password);
-        
-        //Uses current reference becuase auth doesnt update fast enough
-        if (ref.current === false) {
-            alert("Wrong password, please try again.");
-        }
-    }
-    
-    //renders password screen when auth is false and home screen is true
-    if (auth === false) {
-      return(
-            <PasswordScreen checkPassword={checkPassword} onChangeText={onChangeText} value={value}/>
-      )
-    }
-    */
-
-    return (
-        <Tab.Navigator tabBarOptions={{
-                          labelStyle: styles.tabText,
-                          tabStyle: styles.tabContainer
-                          }}>
-            <Tab.Screen name="Home" component={HomeScreen} />
-            <Tab.Screen name="Archive" component={ArchiveStack}/>
-            <Tab.Screen name='QR Scan' component={QRScannerScreen} />
-            <Tab.Screen name="Map" component={MapScreen} />
-        </Tab.Navigator>
-            
-        );
+        return (
+            <Tab.Navigator tabBarOptions={{
+                            labelStyle: styles.tabText,
+                            tabStyle: styles.tabContainer
+                            }}>
+                <Tab.Screen name="Home" component={HomeScreen} />
+                <Tab.Screen name="Archive" component={ArchiveStack}/>
+                <Tab.Screen name='QR Scan' component={QRScannerScreen} />
+                <Tab.Screen name="Map" component={MapScreen} />
+            </Tab.Navigator>
+                
+            );
 }
 
 const styles = StyleSheet.create({
