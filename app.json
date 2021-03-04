@@ -4,9 +4,9 @@
     "slug": "NeighborhoodProject",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/NSNA_Logo.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/NSNA_Logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
