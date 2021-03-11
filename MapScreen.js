@@ -22,7 +22,8 @@ const MapScreen = ({navigation}) => {
                 
                 {markers.map((marker) => (<Marker onCalloutPress={() => navigation.navigate("Article",marker)} 
                                                             coordinate={marker.coord} title={marker.name}
-                                                            description={"Click for more info"}/>) ) }
+                                                            description={"Click for more info"}
+                                                            key={marker.key}/>) ) }
                 
             </MapView>
 
